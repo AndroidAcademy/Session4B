@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Session4B</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_database_demo">DatabaseDemo</string>
+    <string name="title_activity_no_sqlcontent_provider_demo">NoSQLContentProviderDemo</string>
+    <string name="title_activity_sqlcontent_provider_demo">SQLContentProviderDemo</string>
+    <string name="title_activity_isolated_urimatcher_demo">IsolatedURIMatcherDemo</string>
+    <string name="title_activity_next_session_teaser_demo">NextSessionTeaserDemo</string>
+    <string name="title_activity_sql_injection_demo">SqlInjectionDemoActivity</string>
+</resources>
