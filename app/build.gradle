@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 21
-    buildToolsVersion "21.1.2"
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
 
     defaultConfig {
         applicationId "com.example.felixidan.session4b"
         minSdkVersion 19
-        targetSdkVersion 21
+        targetSdkVersion 23
         versionCode 1
         versionName "1.0"
     }
@@ -16,11 +16,20 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+        debug {
+            zipAlignEnabled true
+            minifyEnabled false
+        }
     }
 }
-
+ext{
+    supportLibVersion = '23.1.1'
+    playServicesLibVersion = '8.4.0'
+}
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:21.0.3'
+    compile("com.android.support:appcompat-v7:${supportLibVersion}") {
+        exclude group: 'com.google.android', module: 'support-v4'
+    }
 }
